@@ -4,13 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        for (String i = ""; i.length() < 10; i+="*") {
-            //print (10- i.length()) spaces before the stars!
-            for (int j = 0; j < 10 - i.length(); j++) {
-                System.out.print(" ");
+        for (int rows = 0; rows < 20; rows++) {
+            for (int col = 0; col < 10; col++) {
+                System.out.print(rows % 2 == 0? "*" : "^");
             }
-
-            System.out.println(i);
+            System.out.println();
         }
 
     }
