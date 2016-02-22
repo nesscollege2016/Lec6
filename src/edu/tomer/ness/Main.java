@@ -6,18 +6,15 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        double sum = 0;
 
-        int counter = 0;
-        for (int i = 0; i < 10; i++) {
-            System.out.println("Enter a number");
-            int num = scan.nextInt();
-            System.out.println(num < 100 && num > 0 ? "In Range": "Not in range");
-            if (num < 100 && num > 0){
-                sum = sum + num;
-                counter++;
+        System.out.println("Enter board size:");
+        int n = scan.nextInt();
+
+        for (int i = 1; i <=n ; i++) {
+            for (int j = 1; j <=n ; j++) {
+                System.out.printf("%-10d", i*j);
             }
+            System.out.println();
         }
-        System.out.println(sum / counter);
     }
 }
